@@ -4,3 +4,13 @@
 # Пример: ввод N = 6
 # [20, -90, 15, -34, 10, 0]
 # Вывод: [20, 15, 10, -90, -34, 0]
+
+import random
+N = int(input())
+m = []
+for j in range(N):
+    m=[]
+    for i in range (N):
+        k = random.randint(32, 126)
+        m.append(chr(k))
+        print(chr(k), end="")
