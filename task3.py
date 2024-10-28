@@ -7,3 +7,21 @@
 # [1, 2, 3, 2, 5, 10]
 # Вывод:
 # значение:2 индексы 1 и 3
+
+import random
+N = int(input())
+m = []
+f = 0
+l = 101
+for i in range (N):
+    k = random.randint(0, 10)
+    m.append(k)
+print(m)
+for i in range(N):
+    for j in range(N):
+        if i != j and m[i] == m[j] and j != l:
+            print(f'значение:{m[i]} индексы {i} и {j}')
+            l = i
+            f+=1
+if f ==0:
+    print('Нет')

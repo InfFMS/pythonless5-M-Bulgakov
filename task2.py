@@ -7,3 +7,17 @@
 # Вывод:
 # значение:3 индексы 2 и 3
 # значение:2 индексы 4 и 5
+
+import random
+N = int(input())
+m = []
+f = 0
+for i in range (N):
+    k = random.randint(0, 1000)
+    m.append(k)
+for i in range(N-1):
+    if m[i] == m[i+1]:
+        print(f'значение:{m[i]}, индексы {i} и {i+1}')
+        f += 1
+if f == 0:
+    print('Нет')
